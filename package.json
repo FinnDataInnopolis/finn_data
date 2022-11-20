@@ -30,6 +30,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+    "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore",
+    "eslint:github-actions": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore --max-warnings 0"
   },
   "browserslist": {
     "production": [
