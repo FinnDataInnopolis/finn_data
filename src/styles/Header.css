@@ -1,0 +1,15 @@
+.header-content {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+  /* background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1553095066-5014bc7b7f2d%3Fixlib%3Drb-4.0.3%26ixid%3DMnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fwall-background&tbnid=Xj9Yp8500BYZ-M&vet=12ahUKEwjL7qLnlZX7AhXHpYsKHbe5AP8QMygEegUIARDnAQ..i&docid=i5oUTEWCwPkbrM&w=1000&h=666&q=background%20images&ved=2ahUKEwjL7qLnlZX7AhXHpYsKHbe5AP8QMygEegUIARDnAQ"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767.98px) {
+  .header-content {
+    padding: 0 0 30px 0;
+  }
+}

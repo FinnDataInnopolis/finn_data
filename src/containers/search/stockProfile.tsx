@@ -20,7 +20,9 @@ class StockProfile extends Component {
     fiftyTwoWeekPriceReturnDaily: "",
     beta: "",
   };
+
   symbol = undefined;
+
   socket = undefined;
 
   constructor(props: Readonly<{ location: { pathname: string }}>) {
@@ -34,7 +36,7 @@ class StockProfile extends Component {
   }
 
   getCompanyProfile(): void {
-    finnhubClient.companyProfile2({'symbol': this.symbol}, (e, companyProfile, r) => {
+    finnhubClient.companyProfile2({'symbol': this.symbol}, (e, companyProfile) => {
       this.setState({
         ...this.state,
         name: companyProfile.name,
@@ -47,7 +49,7 @@ class StockProfile extends Component {
   }
 
   getQuote(): void {
-    finnhubClient.quote(this.symbol, (e, quote, r) => {
+    finnhubClient.quote(this.symbol, (e, quote) => {
       this.setState({
         ...this.state,
         price: quote.c,
@@ -56,7 +58,7 @@ class StockProfile extends Component {
   }
 
   getFinancials(): void {
-    finnhubClient.companyBasicFinancials(this.symbol, "all", (e, financials, r) => {
+    finnhubClient.companyBasicFinancials(this.symbol, "all", (e, financials) => {
       const metric = financials.metric;
       this.setState({
         ...this.state,
@@ -74,7 +76,7 @@ class StockProfile extends Component {
     const socket = this.socket;
     const symbol = this.symbol;
 
-    socket.addEventListener("open", (e) => {
+    socket.addEventListener("open", () => {
       socket.send(JSON.stringify({"type": "subscribe", "symbol": symbol}))
     });
 

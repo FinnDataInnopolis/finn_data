@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/FeedCard.css"
 
 function FeedCard({
   imageUrl = "https://i.pinimg.com/originals/6f/b1/6a/6fb16a5303844ee6ab2aebd023a72532.jpg",

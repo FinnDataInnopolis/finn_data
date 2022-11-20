@@ -9,13 +9,9 @@ class HomePage extends Component {
     isLoading: false,
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   getMarketNews(): void {
     this.setState({ isLoading: true });
-    finnhubClient.marketNews("general", {}, (e, marketNews, r) => {
+    finnhubClient.marketNews("general", {}, (e, marketNews) => {
       if (!e && marketNews) {
         this.setState({
           data: marketNews,

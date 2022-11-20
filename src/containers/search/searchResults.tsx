@@ -12,11 +12,8 @@ class SearchResults extends Component {
     data: [],
     isLoading: false,
   };
-  props: Readonly<{ location: { search: string }}>;
 
-  constructor(props) {
-    super(props);
-  }
+  props: Readonly<{ location: { search: string }}>;
 
   getSymbolSearch(): void {
     const params = queryString.parse(this.props.location.search);
@@ -25,9 +22,8 @@ class SearchResults extends Component {
       return;
     }
     this.setState({ isLoading: true });
-    finnhubClient.symbolSearch(params.stock, (e, symbolSearch, r) => {
+    finnhubClient.symbolSearch(params.stock, (e, symbolSearch) => {
       if (!e && symbolSearch) {
-        console.log(symbolSearch);
         this.setState({
           data: symbolSearch.result,
           isLoading: false,
@@ -41,9 +37,7 @@ class SearchResults extends Component {
   }
 
   componentDidUpdate(
-    prevProps: Readonly<{ location: { search: string }}>,
-    prevState: Readonly<{}>,
-    snapshot?: any
+    prevProps: Readonly<{ location: { search: string }}>
   ): void {
     const prevParams = queryString.parse(prevProps.location.search);
     const params = queryString.parse(this.props.location.search);

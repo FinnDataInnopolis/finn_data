@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../../styles/ResultList.css"
 
 function ResultList({ list = [] }) {
   const navigate = useNavigate();

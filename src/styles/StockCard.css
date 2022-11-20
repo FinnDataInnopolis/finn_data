@@ -1,0 +1,35 @@
+.stock-details {
+  position: relative;
+  color: white !important;
+  border-radius: 12px;
+  background-color: rgba(18, 33, 39, 09);
+  padding: 30px;
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stock-details::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #034426b8;
+  transition: 2s;
+}
+
+.stock-details:hover::after {
+  width: 200px;
+  height: 120px;
+  top: calc(100% - 100px);
+}
+
+@media (max-width: 767.98px) {
+  .stock-details {
+    padding: 15px;
+  }
+}
