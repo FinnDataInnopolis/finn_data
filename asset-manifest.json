@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/finn_data/static/css/main.532671a1.css",
-    "main.js": "/finn_data/static/js/main.9fcb384d.js",
+    "main.js": "/finn_data/static/js/main.eb387fba.js",
     "static/media/header_bg.png": "/finn_data/static/media/header_bg.39b7a49300a1e57b5f28.png",
     "index.html": "/finn_data/index.html",
     "main.532671a1.css.map": "/finn_data/static/css/main.532671a1.css.map",
-    "main.9fcb384d.js.map": "/finn_data/static/js/main.9fcb384d.js.map"
+    "main.eb387fba.js.map": "/finn_data/static/js/main.eb387fba.js.map"
   },
   "entrypoints": [
     "static/css/main.532671a1.css",
-    "static/js/main.9fcb384d.js"
+    "static/js/main.eb387fba.js"
   ]
 }
