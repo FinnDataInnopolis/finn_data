@@ -1,0 +1,10 @@
+.brand-name {
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.brand-name:hover {
+  color: white;
+}

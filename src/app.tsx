@@ -4,8 +4,6 @@ import ContactPage from "./containers/contactPage";
 import Search from "./containers/search";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/mainLayout";
-import "./styles/App.css";
-
 
 const App = () => {
   return (

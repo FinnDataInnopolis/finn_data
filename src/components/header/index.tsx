@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../../assets/images/header_bg.png";
+import "../../styles/Header.css"
 
 function Header(props) {
   return (

@@ -1,0 +1,15 @@
+.feed-card {
+  cursor: pointer;
+  min-height: 325px;
+  transition: all 0.5s;
+}
+
+.feed-card:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767.98px) {
+  .feed-card {
+    min-height: 225px;
+  }
+}
