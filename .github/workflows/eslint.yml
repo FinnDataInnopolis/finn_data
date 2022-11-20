@@ -40,7 +40,22 @@ jobs:
 
       - name: Run code style check
         run: npm run style:lint
-      - name: Deploy
-        env: 
+        
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
+        env:
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-        run: npm run deploy
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          folder: build
