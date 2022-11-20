@@ -2,7 +2,7 @@
   "name": "finn_data",
   "version": "0.1.0",
   "main": "./src/index.tsx",
-  "homepage": "https://amirka-kh.github.io/finn_data/",
+  "homepage": "https://finndatainnopolis.github.io/finn_data/",
   "devDependencies": {
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
