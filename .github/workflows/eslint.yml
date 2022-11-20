@@ -39,6 +39,8 @@ jobs:
         run: npm ci
 
       - name: Run code style check
+        run: npm run style:lint
+      - name: Deploy
         env: 
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-        run: npm run style:lint
+        run: npm run deploy
