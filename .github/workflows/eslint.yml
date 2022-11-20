@@ -41,6 +41,9 @@ jobs:
       - name: Run code style check
         run: npm run style:lint
         
+      - name: Run tests
+        run: npm run test
+        
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
