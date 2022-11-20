@@ -44,7 +44,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "style:all": "tsc && npm run style:lint && npm run style:prettier",
-    "style:lint": "eslint src/**",
+    "style:lint": "eslint src/** --no-error-on-unmatched-pattern",
     "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "make-pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky install"
